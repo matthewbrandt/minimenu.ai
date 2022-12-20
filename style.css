@@ -1,0 +1,219 @@
+:root { 
+    --font-stack: "Antipasto", -apple-system, BlinkMacSystemFont, avenir next, avenir, segoe ui, helvetica neue, helvetica, Cantarell, Ubuntu, roboto, noto, arial, sans-serif;
+    --lightsalmonpink: #FF9594;
+    --chinook: #A5CBA8;
+    --zircon: #E0E0E0;
+    --white: #FFFFFF;
+    --black: #000000;
+    --lividbrown: #322929;
+}
+
+@font-face {
+    font-family: "Antipasto";
+    font-weight: 500;
+    src: local("Antipasto"),
+      url("font/Antipasto-Pro-Regular.woff2") format("woff2");
+}
+
+@font-face {
+    font-family: "Antipasto";
+    font-weight: 600;
+    src: local("Antipasto"),
+      url("font/Antipasto-Pro-Demibold.woff2") format("woff2");
+}
+
+@font-face {
+    font-family: "Antipasto";
+    font-weight: 100;
+    src: local("Antipasto Light"),
+      url("font/Antipasto-Pro-Light.woff2") format("woff2");
+}
+
+@font-face {
+    font-family: "Antipasto";
+    font-weight: 800;
+    src: local("Antipasto Bold"),
+      url("font/Antipasto-Pro-Bold.woff2") format("woff2");
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    display: grid;
+    position: relative;
+    width: min(100vw, 1440px);
+    background: var(--white);
+    grid-template-areas: 
+        'header header' 
+        'left right'
+        'awards awards' 
+        'footer footer';
+    font-family: var(--font-stack);
+    font-weight: 600;
+    font-style: normal;
+    color: var(--lividbrown);
+}
+
+header {
+    display: grid;
+    grid-area: header;
+    justify-items: center;
+}
+
+.header-logo {
+    padding-top: 56px;
+}
+
+h1 {
+    font-family: var(--font-stack);
+    font-style: normal;
+    font-weight: 600;
+    font-size: 48px;
+    line-height: 54px;
+    text-align: center;
+    padding-top: 97px;
+    max-width: 29ch;
+}
+
+main {
+    display: flex;
+    flex-wrap: wrap;
+    width: min(100vw, 1440px);
+} 
+
+.left {
+    grid-area: left;
+    position: relative;
+    width: 50%;
+    max-height: 1200px;
+}
+
+.mockup {
+    position: relative;
+    top: -340px;
+}
+
+.right {
+    grid-area: right;
+    position: relative;
+    width: 50%;
+}
+
+h2 {
+    font-family: var(--font-stack);
+    font-style: normal;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 30px;
+    max-width: 29ch;
+    padding-top: 150px;
+    color: var(--lividbrown);
+}
+
+.waitlist-form {
+    padding-top: 30px;
+}
+
+.waitlist-form > label {
+    display: block;
+    font-family: var(--font-stack);
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 48px;    
+    color: var(--lividbrown);
+}
+
+.waitlist-form > input {
+    display: block;
+    min-width: 500px;
+    height: 60px;
+    border: 1px solid rgba(0, 0, 0, 0.3);
+    font-family: var(--font-stack);
+    font-style: normal;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 48px;    
+    color: var(--lividbrown);
+    padding: 0 5px;
+}
+
+.waitlist-form > input[type=submit] {
+    margin-top: 43px;
+    background-color: var(--lightsalmonpink);
+    border-radius: 30px;
+    border: none;
+    font-family: var(--font-stack);
+    font-style: normal;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 48px;
+    text-transform: uppercase;
+    color: var(--lividbrown);
+    cursor: pointer;
+}
+
+.awards {
+    display: grid;
+    grid-area: awards;
+    justify-items: center;
+    width: min(100vw, 1440px);
+    font-family: var(--font-stack);
+    font-style: normal;
+    font-weight: 800;
+    font-size: 24px;
+    line-height: 48px;
+    padding-bottom: 24px;
+}
+
+.awards > p {
+    padding: 0;
+    margin: 0;
+}
+
+.awards a:visited {
+    color: var(--black);
+}
+
+footer {
+    display: grid;
+    grid-area: footer;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 20px;
+    background-color: var(--chinook);
+    min-height: 266px;
+}
+
+.footer-wrap {
+    display: flex;
+    justify-content: space-between;
+    width: min(100vw, 1440px);
+}
+
+.footer-imprint {
+    padding-left: 115px;
+    min-width: 600px;
+    align-self: end;
+    font-family: var(--font-stack);
+    font-style: normal;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 20px;
+    padding-bottom: 30px;
+}
+
+.footer-imprint > p {
+    padding: 0;
+    margin: 0;
+}
+
+.footer-logo {
+    align-self: center;
+}
