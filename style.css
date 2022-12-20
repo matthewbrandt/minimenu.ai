@@ -80,6 +80,7 @@ h1 {
     text-align: center;
     padding-top: 97px;
     max-width: 29ch;
+    z-index: 1;
 }
 
 main {
@@ -103,7 +104,7 @@ main {
 .right {
     grid-area: right;
     position: relative;
-    width: 50%;
+    min-width: 400px;
 }
 
 h2 {
@@ -115,6 +116,7 @@ h2 {
     max-width: 29ch;
     padding-top: 150px;
     color: var(--lividbrown);
+    z-index: 1;
 }
 
 .waitlist-form {
@@ -171,6 +173,7 @@ h2 {
     font-size: 24px;
     line-height: 48px;
     padding-bottom: 24px;
+    z-index: 1;
 }
 
 .awards > p {
